@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1>{{ post.title }}</h1><br>
+  <p>{{ post.content }}</p>
+  <a href="{{ url_for('delete', post_id=post_id) }}" class="btn btn-danger">Удалить пост</a>
+  <a href="{{ url_for('post_update', post_id=post_id) }}" class="btn btn-success">Редактировать</a>
+</div>
+{% endblock %}
